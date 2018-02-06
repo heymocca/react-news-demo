@@ -122,7 +122,7 @@ class PCHeader extends Component {
 							<Menu.Item key="fashion"><Icon type="appstore"/>Fashion</Menu.Item>
                             {userStatus}
 						</Menu>
-                {/*=======================pop up===================*/}
+                {/*=======================pop up window===================*/}
                 <Modal title="user center" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}
                     onCancel = {()=>this.setModalVisible(false)}
                     onOk = {()=>this.setModalVisible(false)} okText="close">
