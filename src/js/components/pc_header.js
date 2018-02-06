@@ -83,8 +83,8 @@ class PCHeader extends Component {
 		this.setState({hasLogined:false});
 	}
 	render() {
-        let {getFieldDecorator} = this.props.form;  // 定义一个全局的变量来接收Form的参数
-        const userStatus = this.state.hasLogined //判断用户是否登录，如果登录则显示退出，反之显示登录或注册
+        let {getFieldDecorator} = this.props.form;  // Define a global variable for getting value from the Form
+        const userStatus = this.state.hasLogined // Check if user logged in
         ?
         <Menu.Item key="logout" className="register">
             {/* <Button type="primary" htmlType="button"></Button> */}
@@ -122,7 +122,7 @@ class PCHeader extends Component {
 							<Menu.Item key="fashion"><Icon type="appstore"/>Fashion</Menu.Item>
                             {userStatus}
 						</Menu>
-                {/*=======================弹出框===================*/}
+                {/*=======================pop up===================*/}
                 <Modal title="user center" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}
                     onCancel = {()=>this.setModalVisible(false)}
                     onOk = {()=>this.setModalVisible(false)} okText="close">
@@ -178,4 +178,4 @@ class PCHeader extends Component {
 	}
 }
 
-export default PCHeader = Form.create({})(PCHeader); //Form要做二次封装
+export default PCHeader = Form.create({})(PCHeader); // encapsulate form
