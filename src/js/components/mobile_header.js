@@ -33,7 +33,7 @@ class MobileHeader extends Component {
 		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&username=userName&password=password&r_userName="+formData.r_userName
 		+"&r_password="+formData.r_password
 		+"&r_confirmPassword="+formData.r_confirmPassword, myFetchOptions)
-		.then(response=>response.json()) //请求之后做一个promise返回
+		.then(response=>response.json()) // After request, return a promise
 		.then(json=>{
 			this.setState({userName: json.NickUserName, userid: json.UserId});
 			localStorage.userid = json.UserId;
